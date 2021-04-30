@@ -63,4 +63,13 @@ class ChallengeTest {
 
         assertEquals(false, challengeHandler.isPassing(mChallengeList))
     }
+
+    @Test
+    fun ispassing_value_nil_when_no_input() {
+        mChallengeList = mutableListOf()
+        System.out.println("mChallengeList is ----" +Arrays.toString(mChallengeList.toTypedArray()))
+
+        // 8 correct answers out of 9 total
+        assertEquals(null, challengeHandler.isPassing(mChallengeList))
+    }
 }
